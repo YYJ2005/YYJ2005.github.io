@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body topmargin=20 leftmargin=50 bgcolor="grey">
+
+<h2>My xml file</h2>
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Click here</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "assignment xml.xml", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
