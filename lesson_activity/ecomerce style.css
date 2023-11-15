@@ -13,6 +13,20 @@ header {
     padding: 20px;
 }
 
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
