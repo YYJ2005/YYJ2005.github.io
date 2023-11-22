@@ -1,0 +1,102 @@
+<html>
+<head >
+<title>Quiz 3</title>
+<link rel=icon href=ok.jpg type=image/jpg>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<style>
+    table{
+        border:2px solid black;
+        width: 48rem;
+    }
+
+</style>
+</head>
+<body topmargin="50" align="center">
+    <h1><center>DCS3003 Website Design Course Survey</center></h1>
+    <form><center>
+        <table>
+            <tr>
+                <td colspan="2"><font color="blue"><u>Personal detail</u></font></td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="id"><b>Student ID:</b></label>
+                    <input type="text" name="id">
+                </td>
+                <td>
+                    <label name="name"><b>Student name:</b></label>
+                    <input type="text" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="email"><b>Email Address:</b></label>
+                    <input type="email" name="email">
+                </td>
+                <td>
+                    <label name="ic"><b>IC No:</b></label>
+                    <input type="text" name="ic">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="course"><b>Course:</b></label>
+                    <select>
+                        <option value="0">-List of Courses-</option>
+                    </select>
+                </td>
+                <td>
+                    <label name="dob"><b>D.O.B:</b></label>
+                    <input type="date" name="dob">
+                </td>
+            </tr>
+        </table><br>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <font color="blue"><u>Questions</u></font><br>
+                    <font color="red"><b>Please answer all questions</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="q1">1) Have you grapsed the content of the Website Design so far?  </label>
+                </td>
+                <td>
+                    <input type="radio" name="q1y" value="YES">YES<br>
+                    <input type="radio" name="q1n" value="NO">NO
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="q2">2) Can you now create a simple but interactive website?    </label>
+                </td>
+                <td>
+                    <input type="radio" name="q2y" value="YES">YES<br>
+                    <input type="radio" name="q2n" value="NO">NO
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label name="q3">3) What have you learned so far?   </label>
+                </td>
+                <td>
+                    <input type="checkbox" name="q3c1" value="Knowledge">Knowledge<br>
+                    <input type="checkbox" name="q3c2" value="Practical">Practical Skills<br>
+                    <input type="checkbox" name="q3c3" value="Problem Solving">Problem Solving<br>
+                    <input type="checkbox" name="q3c4" value="Self-Exploration Skills">Self-Exploration Skills
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label name="q4">4) Wish items / suggestions <font color="red">*</font></label><br>
+                    <textarea rows="3" cols="100"></textarea>
+                </td>
+            </tr>
+        </table><br>
+        
+            <input type="reset" name="reset"><input type="submit" name="submit">
+        </center>
+    </form>
+</body>
+</html>
