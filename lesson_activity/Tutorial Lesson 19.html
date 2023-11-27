@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Switch</title>
+    <link rel="icon" href="ok.jpg" type="image/jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function checknumber() {
+            var getnumber = document.getElementById("insertnumber").value;
+            var dayOfWeek;
+
+            switch (true) {
+                case getnumber == 1:
+                    dayOfWeek = "Monday";
+                    break;
+                case getnumber == 2:
+                    dayOfWeek = "Tuesday";
+                    break;
+                case getnumber == 3:
+                    dayOfWeek = "Wednesday";
+                    break;
+                case getnumber == 4:
+                    dayOfWeek = "Thursday";
+                    break;
+                case getnumber == 5:
+                    dayOfWeek = "Friday";
+                    break;
+                case getnumber == 6:
+                    dayOfWeek = "Saturday";
+                    break;
+                case getnumber == 7:
+                    dayOfWeek = "Sunday";
+                    break;
+                default:
+                    dayOfWeek = "Invalid day";
+            }
+
+            alert("Number = " + getnumber + ", Day of the week: " + dayOfWeek);
+        }
+    </script>
+</head>
+<body>
+    <h1>Tutorial 19</h1>
+    <form>
+        Insert a number week &nbsp;:&nbsp;&nbsp;
+        <input type="number" name="insertnumber" id="insertnumber" onblur="checknumber()">
+    </form>
+</body>
+</html>
