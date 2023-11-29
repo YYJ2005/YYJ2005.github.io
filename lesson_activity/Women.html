@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee Shoes</title>
-    <link rel=icon href="logo ecomerce.jpg" type=image/jpg>
+    <link rel="icon" href="logo ecomerce.jpg" type="image/jpg">
     <link rel="stylesheet" href="ecomerce style.css">
 </head>
 <body>
@@ -12,57 +12,63 @@
         <h1>Our Product</h1>
     </header>
     <main>
-        <div class="product">
+        <div class="product" id="product1">
             <img src="product 7.jpg" alt="Product 7"> 
             <p class="price">RM 399</p>
-           <script>
-                function showmessage(){
-            alert("Succsseful Add to Cart");
-            }
-            </script>
-
-            <button onclick="showmessage()">Add to Cart</button>
+            <button onclick="addToCart('Product 7', 399)">Add to Cart</button>
         </div>
 
-        <div class="product">
+        <div class="product" id="product2">
             <img src="product 8.jpg" alt="Product 8"> 
             <p class="price">RM 299</p>
-            <script>
-                function showmessage(){
-            alert("Succsseful Add to Cart");
-            }
-            </script>
-
-            <button onclick="showmessage()">Add to Cart</button>
+            <button onclick="addToCart('Product 8', 299)">Add to Cart</button>
         </div>
-        <div class="product">
-            <img src="product 9.jpg" alt="Product 9"> 
-            <p class="price">RM 259</p>
-            <script>
-                function showmessage(){
-            alert("Succsseful Add to Cart");
-            }
-            </script>
+        
+        <!-- Add more products as needed -->
 
-            <button onclick="showmessage()">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img src="product 10.jpg" alt="Product 10"> 
-            <p class="price">RM 259</p>
-            <script>
-                function showmessage(){
-            alert("Succsseful Add to Cart");
-            }
-            </script>
-
-            <button onclick="showmessage()">Add to Cart</button>
+        <!-- Shopping Cart Section -->
+        <div id="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: <span id="cart-total">RM 0</span></p>
         </div>
     </main>
     <footer>
         <h3>2023 My E-commerce Store Bee Shoes</h3>
-        <button><a href="https://yyj2005.github.io/lesson_activity/Project.html" >Back to Home</a></button>
+        <button><a href="https://yyj2005.github.io/lesson_activity/Project.html">Back to Home</a></button>
         <p><button onclick="window.print()">Print this page</button></p> 
-    </footer> 
-</head>
+    </footer>
+
+    <script>
+        // Shopping cart logic
+        let cartItems = [];
+        let cartTotal = 0;
+
+        function addToCart(productName, price) {
+            cartItems.push({ name: productName, price: price });
+            cartTotal += price;
+
+            // Update cart display
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItemsList = document.getElementById("cart-items");
+            const cartTotalElement = document.getElementById("cart-total");
+
+            // Clear previous content
+            cartItemsList.innerHTML = "";
+
+            // Display cart items
+            cartItems.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - RM ${item.price}`;
+                cartItemsList.appendChild(li);
+            });
+
+            // Update total
+            cartTotalElement.textContent = `RM ${cartTotal}`;
+        }
+    </script>
 </body>
 </html>
